@@ -3,7 +3,7 @@
     "name": "8088-language-support",
     "displayName": "8088_language_support",
     "description": "Adds support for 8088",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "repository":"https://github.com/BattleIsOver/8088-language-support-vscode",
     "engines": {
         "vscode": "^1.55.0"
