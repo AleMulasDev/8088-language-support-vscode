@@ -16,7 +16,7 @@
     .SECT .BSS
       
     !Ricordati di lasciare l'ultima riga o si bugga il compilatore
-    ```
+```    
 
 * `fun:`
 ```    fun:
@@ -26,7 +26,7 @@
       MOV SP, BP
       POP BP
       RET
-    ```
+```    
 
 * `.input`:
 ```    PUSH _INPUT
@@ -35,4 +35,4 @@
     MOVB (VARIABILE), AL
     PUSH _INPUT
     SYS !Andata a capo
-    ```
+```    
