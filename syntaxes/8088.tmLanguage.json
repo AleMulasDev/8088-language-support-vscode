@@ -20,13 +20,16 @@
     },
     {
       "include": "#constants"
+    },
+    {
+      "include": "#variables"
     }
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
         "name": "constant.language.8088",
-				"match": "\\b(?i:(sys|aaa|aad|aam|aas|adc|add|and|call|cbw|clc|cld|cli|cmc|cmp|cmpsb|cmpsw|cwd|daa|das|dec|div|esc|hlt|idiv|imul|in|inc|int|into|iret|jcc|jcxz|jmp|lahf|lds|lea|les|lock|lodsb|lodsw|loop|mov|movsb|movsw|mul|neg|nop|not|or|out|pop|popf|push|pushf|rcl|rcr|rep|ret|retn|retf|rol|ror|sahf|sal|sar|sbb|scasb|scasw|shl|shr|stc|std|sti|stosb|stosw|sub|test|wait|xchg|xlat|xor))\\b"
+				"match": "\\b(?i:(sys|addb|movb|xorb|jl|cmpb|jle|subb|divb|mulb|aaa|aad|aam|aas|adc|add|and|call|cbw|clc|cld|cli|cmc|cmp|cmpsb|cmpsw|cwd|daa|das|dec|div|esc|hlt|idiv|imul|in|inc|int|into|iret|jcc|jcxz|jmp|lahf|lds|lea|les|lock|lodsb|lodsw|loop|mov|movsb|movsw|mul|neg|nop|not|or|out|pop|popf|push|pushf|rcl|rcr|rep|ret|retn|retf|rol|ror|sahf|sal|sar|sbb|scasb|scasw|shl|shr|stc|std|sti|stosb|stosw|sub|test|wait|xchg|xlat|xor))\\b"
 			}
     ]
 		},
@@ -40,13 +43,13 @@
     "register": {
 			"patterns": [{
         "name": "variable.parameter.8088",
-        "match": "\\b(?i:(ax|bx|cx|dx|ah|bh|ch|dh|al|bl|cl|dl))\\b"
+        "match": "\\b(?i:(ax|bx|cx|dx|ah|bh|ch|dh|al|bl|cl|dl|si|di|bp|sp|cs|ds|es|ss))\\b"
 			}]
 		},
     "label": {
 			"patterns": [{
-        "name": "storage.type.function.8088",
-        "match":"^\\s*(\\S+\\s*:)(?=(\\s*!.*$))"
+        "name": "keyword.control.8088",
+        "match":"^\\s*(\\S+\\s*:)(?!(\\s\\.\\S+))"
 			}]
 		},
     "control": {
@@ -59,6 +62,12 @@
 			"patterns": [{
         "name": "entity.name.function.8088",
         "match":"\\b(?i:\\_(\\S+))\\b"
+			}]
+		},
+    "variables": {
+			"patterns": [{
+        "name": "entity.name.function.8088",
+        "match":"^\\s*(\\S+\\s*:)(?=(\\s\\.\\S+))"
 			}]
 		}
 	}

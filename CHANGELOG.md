@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "ijvm-language-support" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
+All notable changes to the "8088-language-support" extension will be documented in this file.
 ## [Unreleased]
 
 - Initial release
