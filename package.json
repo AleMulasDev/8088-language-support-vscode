@@ -1,0 +1,41 @@
+{
+    "publisher": "BattleIsOver",
+    "name": "8088-language-support",
+    "displayName": "8088_language_support",
+    "description": "Adds support for 8088",
+    "version": "0.0.1",
+    "repository":"",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+      "languages": [
+        {
+          "id": "8088",
+          "aliases": [
+            "8088"
+          ],
+          "extensions": [
+            ".s"
+          ],
+          "configuration": "./language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "8088",
+          "scopeName": "source.8088",
+          "path": "./syntaxes/8088.tmLanguage.json"
+        }
+      ],
+      "snippets": [
+        {
+          "language": "8088",
+          "path": "./snippets/snippets.code-snippets"
+        }
+      ]
+    }
+}

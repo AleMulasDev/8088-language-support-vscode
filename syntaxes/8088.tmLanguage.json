@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.8088",
+	"name": "8088",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+    {
+			"include": "#register"
+		},
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#label"
+    },
+    {
+      "include": "#control"
+    },
+    {
+      "include": "#constants"
+    }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+        "name": "constant.language.8088",
+				"match": "\\b(?i:(sys|aaa|aad|aam|aas|adc|add|and|call|cbw|clc|cld|cli|cmc|cmp|cmpsb|cmpsw|cwd|daa|das|dec|div|esc|hlt|idiv|imul|in|inc|int|into|iret|jcc|jcxz|jmp|lahf|lds|lea|les|lock|lodsb|lodsw|loop|mov|movsb|movsw|mul|neg|nop|not|or|out|pop|popf|push|pushf|rcl|rcr|rep|ret|retn|retf|rol|ror|sahf|sal|sar|sbb|scasb|scasw|shl|shr|stc|std|sti|stosb|stosw|sub|test|wait|xchg|xlat|xor))\\b"
+			}
+    ]
+		},
+    "comments": {
+			"patterns": [{
+        "name": "comment.line.double-dash.8088",
+        "begin":"!",
+        "end":"\\n"
+			}]
+		},
+    "register": {
+			"patterns": [{
+        "name": "variable.parameter.8088",
+        "match": "\\b(?i:(ax|bx|cx|dx|ah|bh|ch|dh|al|bl|cl|dl))\\b"
+			}]
+		},
+    "label": {
+			"patterns": [{
+        "name": "storage.type.function.8088",
+        "match":"^\\s*(\\S+\\s*:)(?=(\\s*!.*$))"
+			}]
+		},
+    "control": {
+			"patterns": [{
+        "name": "keyword.control.8088",
+        "match":"(?i:\\.(sect|text|data|bss))"
+			}]
+		},
+    "constants": {
+			"patterns": [{
+        "name": "entity.name.function.8088",
+        "match":"\\b(?i:\\_(\\S+))\\b"
+			}]
+		}
+	}
+}

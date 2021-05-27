@@ -1,0 +1,38 @@
+{
+    "comments": {
+        // symbol used for single line comment. Remove this entry if your language does not support line comments
+        "lineComment": "//",
+        // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+        "blockComment": [ "/*", "*/" ]
+    },
+    // symbols used as brackets
+    "brackets": [
+        ["(", ")"]
+    ],
+    // symbols that are auto closed when typing
+    "autoClosingPairs": [
+        [".method", ".end-method"],
+        [".var", ".end-var"],
+        [".constant", ".end-constant"],
+        [".main", ".end-main"],
+        ["(", ")"]
+    ],
+    // symbols that can be used to surround a selection
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    "indentationRules": {
+      "increaseIndentPattern": "^(\\s*)((\\S+:)|(LDC_W\\sOBJREF)|(\\.var)|(\\.constant)|(\\.main)|(\\.method))$",
+      "decreaseIndentPattern": "^((\\s*)((INVOKEVIRTUAL\\s+\\S+)|(\\.end-var)|(\\.end-constant)|(\\.end-main)|(\\.end-method)))$"
+    },
+    "onEnterRules": [
+      {
+        "beforeText": "^\\s*(\\.(var|constant|main|method))$",
+        "action": { "indent": "indent", "appendText": "\n"}
+      }
+    ]
+}
