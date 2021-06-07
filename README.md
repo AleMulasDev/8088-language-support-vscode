@@ -1,6 +1,7 @@
 **Supported Snippets**
 * `.program`
-```    _PRINTF = 127
+```    
+    _PRINTF = 127
     _GETCHAR = 117
     _EXIT = 1
 
@@ -19,17 +20,19 @@
 ```    
 
 * `fun:`
-```    fun:
-      PUSH BP
-      MOV BP, SP
-      
-      MOV SP, BP
-      POP BP
-      RET
+```    
+    fun:
+    PUSH BP
+    MOV BP, SP
+    
+    MOV SP, BP
+    POP BP
+    RET
 ```    
 
 * `.input`:
-```    PUSH _INPUT
+```    
+    PUSH _INPUT
     SYS
     SUBB AL, 0x30 !conversione
     MOVB (VARIABILE), AL
